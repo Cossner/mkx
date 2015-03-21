@@ -12,11 +12,14 @@
 /* #Site Styles
 ================================================== */
 	
-	{ background-size: cover; -ms-behavior: url(/backgroundsize.min.htc); } /* background-size: cover*/
+body { background-size: cover;	-ms-behavior: url(/backgroundsize.min.htc); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; } /* background-size: cover*/
 	{ box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; } /* border-box */
 	
 /* #Page Styles
 ================================================== */
+
+body { background-image: url('../images/background.jpg'); background-repeat: no-repeat; background-attachment: fixed; }
+.main_button_overlay { width: 133px; height: 502px; background-image: url('../images/overhead.png'); position: absolute; top: 29px; left: 30px; display: none; }
 
 /* #Media Queries
 ================================================== */

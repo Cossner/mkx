@@ -14,7 +14,7 @@ Public function __construct(){
 
 /* GETTERS */
 
-function GetDB($database){
+function getTable($database){
 	$query = $this->db->get($database);
 	return $query->result();
 }
@@ -26,7 +26,7 @@ function GetRow($database,$tag){
 	return $query[0];
 }
 
-function GetDBFromNewest($database){
+function getTableOrderNewest($database){
 	$this->db->order_by("id","desc");
 	$query = $this->db->get($database);
 	return $query->result();

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Web extends CI_Controller {
+class Tournaments extends CI_Controller {
 
 	function __construct()
 	{
@@ -8,11 +8,13 @@ class Web extends CI_Controller {
 
 		$this->load->helper('url');
 		$this->load->library('tank_auth');
+		$this->load->model('frontend');
 	}
 
 	public function index()
 	{
-		$data['body'] = 'pages/main';
+		$table = $this->frontend->getTableOrderNewest('tournament');
+		$data['body'] = 'pages/tournaments';
 		$this->load->view('layout/all',$data);
 	}
 }

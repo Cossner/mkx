@@ -12,7 +12,7 @@ class Web extends CI_Controller {
 
 	public function index()
 	{
-		$data['body'] = 'pages/main';
+		$data['body'] = 'pages/welcome_message';
 		$this->load->view('layout/all',$data);
 	}
 }
